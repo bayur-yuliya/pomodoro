@@ -1,5 +1,4 @@
 import winsound
-import datetime
 import time
 import logging
 
@@ -15,16 +14,17 @@ winsound.Beep(300, 1000)
 logging.info(f'Start. {repetition} repetition, work time: {work_time}, break time: {break_time}')
 
 while repetition:
+    logging.info(f'Repetition - {repetition}')
     repetition -= 1
 
     # work time
     time.sleep(work_time * 60)
     winsound.Beep(300, 1000)
-    logging.info('Work time end')
+    logging.info('Work time - end')
 
     # break time
     time.sleep(break_time * 60)
     winsound.Beep(300, 1000)
-    logging.info('Break time end')
+    logging.info('Break time - end')
 
-logging.info(f'End. {repetition} repetition, work time: {work_time}, break time: {break_time}')
+logging.info(f'End pomodoro')
